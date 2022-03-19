@@ -1,6 +1,6 @@
-sudo adduser akuhnet --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
-echo "akuhnet:123" | sudo chpasswd
-sudo usermod -aG sudo,adm akuhnet
+sudo adduser admin --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
+echo "admin:admin" | sudo chpasswd
+sudo usermod -aG sudo,adm admin
 clear
 rm -rf ngrok  ngrok.zip  ng.sh > /dev/null 2>&1
 wget -O ng.sh https://bit.ly/GCngrok > /dev/null 2>&1
@@ -35,8 +35,8 @@ sudo service xrdp start
 clear
 echo "=======================100%"
 echo "===================================="
-echo "Username : akuhnet"
-echo "Password : 123"
+echo "Username : admin"
+echo "Password : admin"
 echo "right click to open menu"
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
